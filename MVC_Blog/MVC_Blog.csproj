@@ -89,7 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\normalize.css" />
+    <Content Include="css\skeleton.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\test.jpg" />
+    <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +110,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

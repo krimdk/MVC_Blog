@@ -8,18 +8,29 @@
 
 <h2>Monster Blog</h2>
 
+<a href="#">Skriv</a>
 @foreach (BlogIndex bi in Model)
 {
-    <b>@bi.Post.Overskrift</b>
-    <br/>
-    @bi.Post.Tekst
-    <br/>
+    <table style="width: 100%; border: 1px black solid" >
+        <tr>
+            <td><b>@bi.Post.Overskrift</b></td>
+        </tr>
+        <tr>
+            <td style="width: 60%;">@bi.Post.Tekst</td>
 
-    foreach (Billede b in bi.Billeder)
-    {
-         @b.Filnavn
-     }
-    <hr/>
-    
+            <td>
+                @if (bi.Billeder.Count > 0)
+                {
+                    <img src="../../images/@bi.Billeder[0].Filnavn" class="u-max-full-width"/>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="/Blog/Edit/@bi.Post.ID">Rediger</a>
+                <a href="/Blog/Delete/@bi.Post.ID">Slet</a>
+                
+            </td>
+        </tr>
+    </table>
 }
-
