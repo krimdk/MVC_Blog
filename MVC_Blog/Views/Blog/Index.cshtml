@@ -8,7 +8,7 @@
 
 <h2>Monster Blog</h2>
 
-<a href="#">Skriv</a>
+<a href="/blog/Creat">Skriv</a>
 @foreach (BlogIndex bi in Model)
 {
     <table style="width: 100%; border: 1px black solid" >
@@ -23,6 +23,7 @@
                 {
                     <img src="../../images/@bi.Billeder[0].Filnavn" class="u-max-full-width"/>
                 }
+                <p>Forfatter:</p> @bi.Post.Forfatter
             </td>
         </tr>
         <tr>
